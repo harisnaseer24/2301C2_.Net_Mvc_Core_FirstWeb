@@ -1,4 +1,4 @@
-﻿@{
+﻿<!--@{
     ViewData["Title"] = "Shop";
     int price = 400;
     string product = "Perfumes";
@@ -9,7 +9,7 @@
 
         Our Products
     </h1>
-    @if (price >= 500)
+     @if (price >= 500)
     {
         <p >Our @product range starts from Rs. 500.</p>
     }else{
@@ -18,3 +18,22 @@
    
 </div>
 
+
+-->
+<div class="text-center text-primary">
+    <h1 class="display-2 ">
+
+        Our Products
+    </h1>
+
+    <div class="card">
+        <div class="card-header">
+           @TempData["pname"]
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">  @TempData["desc"]</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Rs.   @TempData["price"]</a>
+        </div>
+    </div>
+</div>

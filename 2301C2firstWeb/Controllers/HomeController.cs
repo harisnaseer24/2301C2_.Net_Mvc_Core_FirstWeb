@@ -9,11 +9,17 @@ namespace _2301C2firstWeb.Controllers
        
         public IActionResult Index()
         {
+            TempData.Keep("pname");
+            TempData.Keep("desc");
+            TempData.Keep("price");
             return View();
         }
            public IActionResult Privacy()
         
         {
+            TempData.Keep("pname");
+            TempData.Keep("desc");
+            TempData.Keep("price");
             return View();
         }
 
